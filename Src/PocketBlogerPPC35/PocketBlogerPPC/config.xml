@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <program>
+    <form IsMaxSize="false" default="1" TextBoxWidth="291" />
+    <upload>
+      <image width="500" height="300" />
+      <youtube username="" password="" IsSkip="false"/>
+    </upload>
+    <api daumSearchApi="" />
+    <signature>
+      <![CDATA[
+        <DIV style='CLEAR: both; BORDER-RIGHT: #eeeeee 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #eeeeee 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 5px 0px 0px; BORDER-LEFT: #eeeeee 1px solid; WIDTH: 94%; PADDING-TOP: 10px; BORDER-BOTTOM: #eeeeee 1px solid'>
+        현재 게시글은 휴대폰에서 <A href=''style='FONT-WEIGHT: bold; FONT-SIZE: 12px' target=_blank>Pocket Bloger</A>를 통해 작성 되었습니다.
+        </DIV>
+      ]]>
+    </signature>
+  </program>
+  <!--StillQuality : Default,High,Low,Nomal -->
+  <camera deleteTempFile="true" StillQuality="Default" />
+  <blogInfo>
+    <bitem Idx="1" Key="76795" id="" password="" url="" Title="티스토리" />
+  </blogInfo>
+</config>

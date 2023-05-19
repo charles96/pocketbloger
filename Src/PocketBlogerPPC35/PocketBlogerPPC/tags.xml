@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tags>
+  <item name="Br">
+    <![CDATA[<br/>]]>
+  </item>
+  <item name="Anchor">
+    <![CDATA[<a href=""></a>]]>
+  </item>
+  <item name="ImageLink">
+    <![CDATA[<img src=""/>]]>
+  </item>
+  <item name="Center">
+    <![CDATA[<center></center>]]>
+  </item>
+</tags>

@@ -1,0 +1,267 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D3AFACB-BD94-41DF-9564-99217916DC80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PocketBlogerPPC</RootNamespace>
+    <AssemblyName>PocketBloger</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <DeployDirSuffix>PocketBlogerPPC</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>Icon_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="blogengineCf, Version=1.0.3345.654, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\blogengineCf\blogengineCf\bin\Release\blogengineCf.dll</HintPath>
+    </Reference>
+    <Reference Include="filedialogs, Version=1.3.3389.35397, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Charles\Desktop\filedialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Google\Google Data API SDK\Redist\Mobile\WindowsMobile\Google.GData.Client.DLL</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Google\Google Data API SDK\Redist\Mobile\WindowsMobile\Google.GData.Extensions.DLL</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.YouTube, Version=1.2.0.27851, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Google\Google Data API SDK\Redist\Mobile\WindowsMobile\Google.GData.YouTube.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenNETCF, Version=2.3.0.21, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Smart Device Framework\Bin\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Net, Version=2.3.0.39, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Smart Device Framework\Bin\OpenNETCF.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Windows.Forms, Version=2.3.0.39, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Smart Device Framework\Bin\OpenNETCF.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ApiSetting.cs" />
+    <Compile Include="Config\BlogAccount.cs" />
+    <Compile Include="Config\BlogConfig.cs" />
+    <Compile Include="Config\FormSetting.cs" />
+    <Compile Include="Config\ImageSetting.cs" />
+    <Compile Include="Config\ProgramSetting.cs" />
+    <Compile Include="Config\UploadSetting.cs" />
+    <Compile Include="Config\YoutubeSetting.cs" />
+    <Compile Include="DeviceResolution.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlogAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlogAdd.Designer.cs">
+      <DependentUpon>frmBlogAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlogList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlogList.Designer.cs">
+      <DependentUpon>frmBlogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookSearch.Designer.cs">
+      <DependentUpon>frmBookSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContentView.Designer.cs">
+      <DependentUpon>frmContentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoveSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoveSearch.Designer.cs">
+      <DependentUpon>frmMoveSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovie.Designer.cs">
+      <DependentUpon>frmMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWrite.Designer.cs">
+      <DependentUpon>frmWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gps\GpsTracker.cs" />
+    <Compile Include="Gps\DegreesMinutesSeconds.cs" />
+    <Compile Include="Gps\DeviceStateChangedEventArgs.cs" />
+    <Compile Include="Gps\GPS.cs" />
+    <Compile Include="Gps\GpsDeviceState.cs" />
+    <Compile Include="Gps\GpsPosition.cs" />
+    <Compile Include="Gps\LocationChangedEventArgs.cs" />
+    <Compile Include="Gps\Utils.cs" />
+    <Compile Include="HtmlTag.cs" />
+    <Compile Include="LoadMetaData.cs" />
+    <Compile Include="MemoryDriveInfo.cs" />
+    <Compile Include="OpenApi\BookCatalog.cs" />
+    <Compile Include="OpenApi\DaumBookSearch.cs" />
+    <Compile Include="OpenApi\MovieEntity.cs" />
+    <Compile Include="OpenApi\MovieSearch.cs" />
+    <Compile Include="Sound.cs" />
+    <Compile Include="Upload\ImageUtil.cs" />
+    <Compile Include="ItemInfo.cs" />
+    <Compile Include="MentBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MentBox.Designer.cs">
+      <DependentUpon>MentBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBlogAdd.resx">
+      <DependentUpon>frmBlogAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBlogList.resx">
+      <DependentUpon>frmBlogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookSearch.resx">
+      <DependentUpon>frmBookSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContentView.resx">
+      <DependentUpon>frmContentView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoveSearch.resx">
+      <DependentUpon>frmMoveSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovie.resx">
+      <DependentUpon>frmMovie.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWrite.resx">
+      <DependentUpon>frmWrite.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MentBox.resx">
+      <DependentUpon>MentBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload\UploadContent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+    </Content>
+    <Content Include="Icon_1.ico" />
+    <Content Include="tags.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
